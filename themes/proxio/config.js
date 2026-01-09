@@ -1,5 +1,3 @@
-
-```javascript
 /**
  * 另一个落地页主题 PROXIO 配置
  * "Chief Officer of Freedom" 定制版
@@ -185,9 +183,7 @@ const CONFIG = {
   PROXIO_CTA_BUTTON_TEXT: 'WeChat QR Code',
 
   PROXIO_POST_REDIRECT_ENABLE: true,
-  PROXIO_POST_REDIRECT_URL: '', // 如果没有独立域名，留空或填 Vercel 域名
+  PROXIO_POST_REDIRECT_URL: 'https://bieji.vercel.app/', // 如果没有独立域名，留空或填 Vercel 域名
   PROXIO_NEWSLETTER: process.env.NEXT_PUBLIC_THEME_PROXIO_NEWSLETTER || false
 }
 export default CONFIG
-
-```
