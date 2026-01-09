@@ -24,7 +24,7 @@ const BLOG = {
   // 3. 修改核心个人信息
   AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || 'Freedom Officer', 
   BIO: process.env.NEXT_PUBLIC_BIO || 'A real man who successfully quit with a smile.', 
-  LINK: process.env.NEXT_PUBLIC_LINK || 'https://your-blog.vercel.app', // 建议改为你的 Vercel 域名
+  LINK: process.env.NEXT_PUBLIC_LINK || 'https://bieji.vercel.app', // 建议改为你的 Vercel 域名
   TITLE: process.env.NEXT_PUBLIC_TITLE || 'The Freedom Project', // 网站标题
   KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || 'Freedom, Productivity, Life, Notion', 
   
