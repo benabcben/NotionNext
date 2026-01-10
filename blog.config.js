@@ -5,25 +5,20 @@ const BLOG = {
     process.env.NOTION_PAGE_ID ||
     '02ab3b8678004aa69e9e415905ef32a5,en:7c1d570661754c8fbc568e00a01fd70e',
 
-  // 1. 确保主题是 proxio
   THEME: process.env.NEXT_PUBLIC_THEME || 'proxio', 
-  
-  // 2. 语言改为英文
   LANG: process.env.NEXT_PUBLIC_LANG || 'en-US', 
-
   SINCE: process.env.NEXT_PUBLIC_SINCE || 2024, 
   PSEUDO_STATIC: process.env.NEXT_PUBLIC_PSEUDO_STATIC || false,
   NEXT_REVALIDATE_SECOND: process.env.NEXT_PUBLIC_REVALIDATE_SECOND || 60, 
   APPEARANCE: process.env.NEXT_PUBLIC_APPEARANCE || 'light', 
   APPEARANCE_DARK_TIME: process.env.NEXT_PUBLIC_APPEARANCE_DARK_TIME || [18, 6], 
 
-  // 3. 核心个人信息
   AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || 'Freedom Officer', 
   BIO: process.env.NEXT_PUBLIC_BIO || 'A real man who successfully quit with a smile.', 
   LINK: process.env.NEXT_PUBLIC_LINK || 'https://bieji.vercel.app', 
+  
   TITLE: process.env.NEXT_PUBLIC_TITLE || 'The Freedom Project', 
-
-  // ✅【新增】就是这一行！改掉那句中文描述
+  // ✅ 就是这一行，彻底消灭中文描述！
   DESCRIPTION: process.env.NEXT_PUBLIC_DESCRIPTION || 'Sharing my journey of productivity and freedom.',
 
   KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || 'Freedom, Productivity, Life, Notion', 
@@ -33,10 +28,8 @@ const BLOG = {
   BEI_AN_LINK: process.env.NEXT_PUBLIC_BEI_AN_LINK || 'https://beian.miit.gov.cn/', 
   BEI_AN_GONGAN: process.env.NEXT_PUBLIC_BEI_AN_GONGAN || '', 
 
-  // RSS订阅
   ENABLE_RSS: process.env.NEXT_PUBLIC_ENABLE_RSS || true, 
 
-  // 引用其他配置
   ...require('./conf/comment.config'), 
   ...require('./conf/contact.config'), 
   ...require('./conf/post.config'), 
@@ -66,7 +59,6 @@ const BLOG = {
 
   UUID_REDIRECT: process.env.UUID_REDIRECT || false,
 
-  // 4. 关闭会员功能
   ENABLE_CLERK: false,
   ENABLE_SIGNUP: false,
   ENABLE_SIGNIN: false
