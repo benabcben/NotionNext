@@ -150,7 +150,7 @@ const CONFIG = {
       name: 'Connect',
       menus: [
         { title: 'Github', href: 'https://github.com' }, // 记得改成你的 GitHub 链接
-        { title: 'Email', href: 'mailto:xiashunquan@gmail.com' }
+        { title: 'Email', href: 'xiashunquan@gmail.com' }
       ]
     }
   ],
