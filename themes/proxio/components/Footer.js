@@ -1,5 +1,18 @@
+import AnalyticsBusuanzi from '@/components/AnalyticsBusuanzi'
+import { BeiAnGongAn } from '@/components/BeiAnGongAn'
+import BeiAnSite from '@/components/BeiAnSite'
+import CopyRightDate from '@/components/CopyRightDate'
+import DarkModeButton from '@/components/DarkModeButton'
+import LazyImage from '@/components/LazyImage'
+// import PoweredBy from '@/components/PoweredBy' // 这一行被我们注释掉了，为了删除它
+import { siteConfig } from '@/lib/config'
+import { useGlobal } from '@/lib/global' // ✅ 这一行就是之前报错缺失的！
+import SmartLink from '@/components/SmartLink'
+import CONFIG from '../config'
+import SocialButton from './SocialButton'
+
 /**
- * 网页底脚 (已去除 PoweredBy)
+ * 网页底脚 (完整修复版)
  */
 export const Footer = ({ title }) => {
   const { siteInfo } = useGlobal()
@@ -59,7 +72,7 @@ export const Footer = ({ title }) => {
         <div className='dark:text-gray-200 py-4 flex flex-col lg:flex-row  justify-between items-center border-t border-gray-600'>
           <div className='flex gap-x-2 flex-wrap justify-between items-center'>
             <CopyRightDate />
-            {/* 🚨 我把这一行 <PoweredBy /> 删掉了，现在干净了！ */}
+            {/* PoweredBy 已经删除了 */}
           </div>
 
           <DarkModeButton className='dark:text-white' />
