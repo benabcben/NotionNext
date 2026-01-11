@@ -1,34 +1,28 @@
-// ✅ 纯净版配置 - 修复乱码问题
+// ✅ 终极修复版：修复构建失败，隐藏中文描述
 const BLOG = {
-  // 1. 基础连接
   API_BASE_URL: process.env.API_BASE_URL || 'https://www.notion.so/api/v3',
   NOTION_PAGE_ID: process.env.NOTION_PAGE_ID || '02ab3b8678004aa69e9e415905ef32a5',
 
-  // 2. 主题与语言
-  THEME: 'proxio',      // 锁定为 proxio 主题
-  LANG: 'en-US',        // 锁定为英文
-
-  // 3. 网站信息 (注意：Notion 里的标题优先级比这里高，所以还要去 Notion 改)
+  // 1. 基础设置
+  THEME: 'proxio',      
+  LANG: 'en-US',        
+  
+  // 2. 网站信息
   TITLE: 'The Freedom Project',
-  DESCRIPTION: 'Sharing my journey of productivity and freedom.',
+  DESCRIPTION: 'Sharing my journey of productivity and freedom.', // ✅ 英文描述
   AUTHOR: 'Freedom Officer',
   BIO: 'A real man who successfully quit with a smile.',
   LINK: 'https://bieji.vercel.app',
-  
-  // 4. 杂项设置
+
+  // 3. 杂项
   SINCE: 2024,
   APPEARANCE: 'light',
   APPEARANCE_DARK_TIME: [18, 6],
   KEYWORDS: 'Freedom, Life, Blog',
   BLOG_FAVICON: '/favicon.ico',
-  
-  // 5. 功能开关
   ENABLE_RSS: true,
-  CUSTOM_MENU: true,
-  CAN_COPY: true,
-  UUID_REDIRECT: false,
-
-  // 6. 核心插件 (不要乱删)
+  
+  // 4. 引用必须的模块 (不要删)
   ...require('./conf/comment.config'),
   ...require('./conf/contact.config'),
   ...require('./conf/post.config'),
@@ -46,16 +40,25 @@ const BLOG = {
   ...require('./conf/notion.config'),
   ...require('./conf/dev.config'),
 
-  // 7. 【安全锁】关闭会员系统 & 修复乱码
-  // 之前乱码是因为这里配置了错误的 EMAIL 加密，现在直接关掉
-  CONTACT_EMAIL: '', 
-  CONTACT_WEIBO: '',
-  CONTACT_TWITTER: '',
-  CONTACT_GITHUB: '',
-  
+  // 5. 其他开关
+  CUSTOM_EXTERNAL_JS: [''],
+  CUSTOM_EXTERNAL_CSS: [''],
+  CUSTOM_MENU: true,
+  CAN_COPY: true,
+  LAYOUT_SIDEBAR_REVERSE: false,
+  GREETING_WORDS: 'Welcome to the Free World.',
+  UUID_REDIRECT: false,
+
+  // 6. 【绝对关键】强制关闭会员系统，防止报错
   ENABLE_CLERK: false,
   ENABLE_SIGNUP: false,
-  ENABLE_SIGNIN: false
+  ENABLE_SIGNIN: false,
+  
+  // 7. 邮箱加密留空，防止乱码
+  CONTACT_EMAIL: '',
+  CONTACT_WEIBO: '',
+  CONTACT_TWITTER: '',
+  CONTACT_GITHUB: ''
 }
 
 module.exports = BLOG
