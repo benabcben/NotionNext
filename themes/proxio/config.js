@@ -174,7 +174,7 @@ const CONFIG = {
   // =================================================================
   // 7. 底部行动呼吁 & 微信 (Call To Action)
   // =================================================================
-  PROXIO_CTA_ENABLE: true,
+  PROXIO_CTA_ENABLE: false, // 🔴 已设置为 false，底部不会再显示微信二维码和联系模块
   PROXIO_CTA_TITLE: '保持联系',
   PROXIO_CTA_TITLE_2: '加入我的旅程',
   PROXIO_CTA_DESCRIPTION:
