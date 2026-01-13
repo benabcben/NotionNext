@@ -5,13 +5,13 @@ const BLOG = {
 
   // 1. 基础设置
   THEME: 'proxio',      
-  LANG: 'en-US',        
+  LANG: 'zh-CN',        
   
   // 2. 网站信息
   TITLE: 'The Freedom Project',
-  DESCRIPTION: 'Sharing my journey of productivity and freedom.', // ✅ 英文描述
-  AUTHOR: 'Freedom Officer',
-  BIO: 'A real man who successfully quit with a smile.',
+  DESCRIPTION: '分享我的生产力和自由之旅。', //
+  AUTHOR: 'bieji',
+  BIO: '',
   LINK: 'https://bieji.vercel.app',
 
   // 3. 杂项
